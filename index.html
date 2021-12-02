@@ -2,15 +2,25 @@
     <head>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>Web App - Simple Interest Calculator</title>
+    <script src="script.js"></script>
     </head>
     <body>
+        <div class = "interestform">
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <form>
+        Amount <input type="number" id="principal">  <br/>
+        Interest Rate <input type="range" id="rate" step="0.5" min="0.00" max ="100.00" oninput="changeInterest()"> <span id="interestRate">50.00% </span><br/>
+        No. of Years <select name ="dropdown" id="years">
+            <option value ="1" selected>1</option>
+            <option value ="2" >2</option>
+            <option value ="3" >3</option>
+            <option value ="4" >4</option>
+            <option value ="5" >5</option>
+        </select>  <br/>
+            Interest : <span id="result"></span><br>
+            <button type="button" onclick="compute()">Compute Interest</button>
+        </form>
+    </div>
     </body>
 </html>
