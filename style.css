@@ -39,3 +39,8 @@ h1
 {
     line-height: 100%;
 }
+
+.highlight
+{
+    background-color: yellow;
+}

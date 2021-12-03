@@ -12,13 +12,14 @@ function compute()
         total = interest+p;
 
         deposit = document.getElementById("deposit");
-        deposit.textContent = "If you deposit " + p + ",";
+        deposit.innerHTML = "If you deposit " + "<span class=\"highlight\">"+p +"</span>"+ ",";  
         interestratetext = document.getElementById("interestratetext");
-        interestratetext.textContent = " at an interest rate of " + rateOnScreen + "%.";
+        interestratetext.innerHTML = " at an interest rate of " + "<span class=\"highlight\">"+rateOnScreen + "%</span>.";
         finalamount = document.getElementById("finalamount");
-        finalamount.textContent = "You will receive an amount of " +interest + ",";
+        finalamount.innerHTML = "You will receive an amount of " +"<span class=\"highlight\">"+interest+"</span>" + ",";
         finalyear =  document.getElementById("finalyear");
-        finalyear.textContent = "in the year " + year;
+        finalyear.innerHTML = "in the year " + "<span class=\"highlight\">"+year + "</span>.";
+
 }
     else
     {
