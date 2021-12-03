@@ -6,10 +6,10 @@
     <script src="script.js"></script>
     </head>
     <body>
-        <div class = "interestform">
+        <div class = "mainframe">
         <h1>Simple Interest Calculator</h1>
-        <form>
-        Amount <input type="number" id="principal">  <br/>
+        <form class ="interestform">
+        Amount <input type="number" id="principal" value="1000.00">  <br/>
         Interest Rate <input type="range" id="rate" step="0.5" min="0.00" max ="100.00" oninput="changeInterest()"> <span id="interestRate">50.00% </span><br/>
         No. of Years <select name ="dropdown" id="years">
             <option value ="1" selected>1</option>
@@ -17,10 +17,17 @@
             <option value ="3" >3</option>
             <option value ="4" >4</option>
             <option value ="5" >5</option>
-        </select>  <br/>
-            Interest : <span id="result"></span><br>
+            </select> <br/>
             <button type="button" onclick="compute()">Compute Interest</button>
-        </form>
+            <br/>
+            <div class="result">
+                <br>
+                <span id="deposit"></span><br>
+                <span id="interestratetext"></span><br>
+                <span id="finalamount"></span><br>
+                <span id="finalyear"></span>
+            </div>
+        </form>© Everyone Can Get Rich
     </div>
     </body>
 </html>

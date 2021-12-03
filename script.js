@@ -1,6 +1,7 @@
 function compute()
 {
     let p = document.getElementById("principal").value;
+    
     let rate = document.getElementById("rate").value / 100.0;
     let rateOnScreen = document.getElementById("rate").value;
     let years = parseInt(document.getElementById("years").value);
@@ -9,10 +10,16 @@ function compute()
     let year = new Date().getFullYear();
     year = year+years;
     total = interest+p;
-    result = document.getElementById("result");
-    result.textContent = "If you deposit " + p + ", at an interest rate of " 
-            + rateOnScreen + "%. You will receive an amount of " 
-            + interest +",in the year " + year;
+    
+    deposit = document.getElementById("deposit");
+    deposit.textContent = "If you deposit " + p + ",";
+    interestratetext = document.getElementById("interestratetext");
+    interestratetext.textContent = " at an interest rate of " + rateOnScreen + "%.";
+    finalamount = document.getElementById("finalamount");
+    finalamount.textContent = "You will receive an amount of " +interest + ",";
+    finalyear =  document.getElementById("finalyear");
+    finalyear.textContent = "in the year " + year;
+    
 }
         
 function changeInterest()
