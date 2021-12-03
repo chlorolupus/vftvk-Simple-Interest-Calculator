@@ -23,6 +23,7 @@ function compute()
     else
     {
         alert("Please enter positive number in amount");
+        document.getElementById("principal").focus();
     }
 }
         
